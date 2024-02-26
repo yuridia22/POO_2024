@@ -59,7 +59,7 @@ public class Abeja {
         this.vivo = f;
     }
 
-    public void volar(boolean vivo){
+    public void volar(){
         if(vivo==true){
             System.out.println("bzzt bzzt bzzt bzzt bzzt");
         }
@@ -67,7 +67,7 @@ public class Abeja {
             System.out.println("Yoo ya estoy muerto");
         }
     }
-    public void picar(boolean vivo){
+    public void picar(){
         if(vivo==true){
             System.out.println("Por lo que me importa morire");
         }
@@ -75,8 +75,8 @@ public class Abeja {
             System.out.println("Yoo ya estoy muerto");
         }
     }
-    public void trabajo(String t){
-        switch (t) {
+    public void trabajo(){
+        switch (tipo) {
             case "Reyna":
                     System.out.println("Pones huevos para que la colonia crezca");
                 break;
@@ -98,7 +98,7 @@ public class Abeja {
                 break;
         }
     }
-    public void comer(boolean vivo){
+    public void comer(){
         if(vivo==true){
             System.out.println("EStoy comiendo miel");
         }
@@ -106,7 +106,7 @@ public class Abeja {
             System.out.println("Yoo ya estoy muerto");
         }
     }
-    public void tomarAgua(boolean vivo){
+    public void tomarAgua(){
         if(vivo==true){
             System.out.println("Donde hay agua");
             System.out.println("Ya vi donde hay, vor a beberlo");
