@@ -5,7 +5,6 @@ public class Arquero {
     private int edad;
     private double altura;
     private String genero;
-    private Caballo c1;
 
     public Arquero(String nombre, int edad, double altura, String genero){
         setNombre(nombre);
