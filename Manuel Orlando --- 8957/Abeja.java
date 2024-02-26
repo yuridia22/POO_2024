@@ -41,22 +41,22 @@ public class Abeja {
 
     //Se crean los setters
     public void setRaza(String a){
-        raza = a;
+        this.raza = a;
     }
     public void setTipo(String b){
-        tipo = b;
+        this.tipo = b;
     }
     public void setDias_Vivo(int c){
-        dias_Vivo = c;
+        this.dias_Vivo = c;
     }
     public void setTamanio(double d){
-        tamanio = d;
+        this.tamanio = d;
     }
     public void setColor(String e){
-        color = e;
+        this.color = e;
     }
     public void setVivo(boolean f){
-        vivo = f;
+        this.vivo = f;
     }
 
     public void volar(boolean vivo){
