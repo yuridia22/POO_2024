@@ -1,4 +1,3 @@
-package Objeto2;
 public class Abeja {
     //Atributos
     private String raza;

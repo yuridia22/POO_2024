@@ -1,4 +1,3 @@
-package Objeto2;
 import java.util.Scanner;
 
 public class Zangano {
@@ -69,6 +68,6 @@ public class Zangano {
         zangano1.tomarAgua();
         zangano1.volar();
         zangano1.picar();
-        zangano1.trabajo();
+        zangano1.trabajar();
     }
 }
