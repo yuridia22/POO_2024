@@ -1,0 +1,55 @@
+package Jimmy.clases;
+
+public class Refresco {
+  private String nombre;
+  private String sabor;
+  private int volumen;
+  private double precio;
+
+  Refresco(String nombre, String sabor, int volumen, double precio) {
+    setNombre(nombre);
+    setSabor(sabor);
+    setVolumen(volumen);
+    setPrecio(precio);
+  }
+
+  public String getNombre() {
+    return nombre;
+  }
+
+  public void setNombre(String nombre) {
+    this.nombre = nombre;
+  }
+
+  public String getSabor() {
+    return sabor;
+  }
+
+  public void setSabor(String sabor) {
+    this.sabor = sabor;
+  }
+
+  public int getVolumen() {
+    return volumen;
+  }
+
+  public void setVolumen(int volumen) {
+    this.volumen = volumen;
+  }
+
+  public double getPrecio() {
+    return precio;
+  }
+
+  public void setPrecio(double precio) {
+    this.precio = precio;
+  }
+
+  public void burbujear() {
+    System.out.println("Burbujear");
+  }
+
+  public void espumear() {
+    System.out.println("Espumear");
+  }
+}
