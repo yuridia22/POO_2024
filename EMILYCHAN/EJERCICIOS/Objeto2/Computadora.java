@@ -32,7 +32,7 @@ public class Computadora {
     }
 
     public void setMemoriaRAM(int memoriaRAM) {
-        this.memoriaRAM = (memoriaRAM > 0) ? memoriaRAM : 4; // Default to 4 GB if non-positive value provided
+        this.memoriaRAM = (memoriaRAM > 0) ? memoriaRAM : 4; 
     }
 
     public double getAlmacenamiento() {
@@ -40,7 +40,7 @@ public class Computadora {
     }
 
     public void setAlmacenamiento(double almacenamiento) {
-        this.almacenamiento = (almacenamiento > 0) ? almacenamiento : 256.0; // Default to 256 GB if non-positive value provided
+        this.almacenamiento = (almacenamiento > 0) ? almacenamiento : 256.0;
     }
 
     public boolean isEncendida() {
@@ -74,32 +74,32 @@ public class Computadora {
 //clase main
 public class MainComputadora {
     public static void main(String[] args) {
-        // Create a computer
+
         Computadora miComputadora = new Computadora("HP", "Pavilion", 8, 512.0);
 
-        // Display initial computer details
+        
         System.out.println("Marca: " + miComputadora.getMarca());
         System.out.println("Modelo: " + miComputadora.getModelo());
         System.out.println("Memoria RAM: " + miComputadora.getMemoriaRAM() + " GB");
         System.out.println("Almacenamiento: " + miComputadora.getAlmacenamiento() + " GB");
 
-        // Turn on the computer
+        
         miComputadora.encender();
 
-        // Process data
+        
         miComputadora.procesarDatos("Datos importantes");
 
-        // Try to process data when the computer is turned off
+        
         miComputadora.apagar();
         miComputadora.procesarDatos("Datos después de apagar");
 
-        // Turn on the computer again
+        
         miComputadora.encender();
 
-        // Process data after turning the computer back on
+        
         miComputadora.procesarDatos("Datos después de encender");
 
-        // Display final computer details
+
         System.out.println("La computadora está encendida: " + miComputadora.isEncendida());
     }
 }
