@@ -7,6 +7,6 @@ public class Boxeador {
         l.rendirse();
         l.entrenar();
         l.hablar();
-        l.info();
+        l.devolverInfo();
     }
 }

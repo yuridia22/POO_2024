@@ -1,4 +1,3 @@
-package Avatar;
 public class Luchador {
 
   private String estiloCombate;
