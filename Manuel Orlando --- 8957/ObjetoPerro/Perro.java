@@ -1,4 +1,3 @@
-package ObjetoPerro;
 import java.util.Random;
 
 public class Perro{

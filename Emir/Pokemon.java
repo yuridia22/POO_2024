@@ -2,13 +2,16 @@ public class Pokemon {
     private int numero;
     private String nombre;
     private int gen;
-    private String[] tipo; 
+    private String[] tipo;
     private double alt;
     private double peso;
     private boolean evo;
     private int etapa;
+    private boolean mega;
+    private boolean giga;
 
-    public Pokemon (int numero, String nombre, int gen,  double alt, double peso, boolean evo, int etapa){
+    public Pokemon(int numero, String nombre, int gen, double alt, double peso, boolean evo, int etapa, boolean mega,
+            boolean giga) {
         setNum(numero);
         setNombre(nombre);
         setGen(gen);
@@ -16,106 +19,128 @@ public class Pokemon {
         setPeso(peso);
         setEvo(evo);
         setEtapa(etapa);
+        setMega(mega);
+        setGiga(giga);
     }
 
-    public int getNum(){
+    public int getNum() {
         return numero;
     }
 
-    public void setNum(int numero){
+    public void setNum(int numero) {
         this.numero = numero;
     }
 
-    public String getNombre(){
+    public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre){
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public int getGen(){
+    public int getGen() {
         return gen;
     }
 
-    public void setGen(int gen){
+    public void setGen(int gen) {
         this.gen = gen;
     }
 
-    public String[] getTipo(){
+    public String[] getTipo() {
         return tipo;
     }
 
-    public void setTipo(int i){
-        this.tipo =  new String[19];
+    public void setTipo(int i) {
+        this.tipo = new String[19];
     }
 
-    public double getAlt(){
+    public double getAlt() {
         return alt;
     }
 
-    public void setAlt(double alt){
+    public void setAlt(double alt) {
         this.alt = alt;
     }
 
-    public double getPeso(){
+    public double getPeso() {
         return peso;
     }
 
-    public void setPeso(double peso){
+    public void setPeso(double peso) {
         this.peso = peso;
     }
 
-    public boolean getEvo(){
+    public boolean getEvo() {
         return evo;
     }
 
-    public void setEvo(boolean evo){
+    public void setEvo(boolean evo) {
         this.evo = evo;
     }
 
-    public int getEtapa(){
+    public int getEtapa() {
         return etapa;
     }
 
-    public void setEtapa(int etapa){
+    public void setEtapa(int etapa) {
         this.etapa = etapa;
     }
 
-    public void atacar(String mov){
+    public boolean getMega() {
+        return mega;
+    }
+
+    public void setMega(boolean mega) {
+        this.mega = mega;
+    }
+
+    public boolean getGiga() {
+        return giga;
+    }
+
+    public void setGiga(boolean giga) {
+        this.giga = giga;
+    }
+
+    public void atacar(String mov) {
         System.out.println(nombre + " usa " + mov);
     }
 
-    public void comer(String baya){
+    public void comer(String baya) {
         System.out.println("Que rica baya " + baya);
     }
 
-    public void dormir(){
+    public void dormir() {
         System.out.println("Zzzzzzzzz");
     }
 
-    public void acariciar(){
+    public void acariciar() {
         System.out.println("Que relajante <3");
     }
 
-    public void correr(){
+    public void correr() {
         System.out.println("Esto es muy divertido");
     }
 
-    public void debilitar(){
+    public void debilitar() {
         System.out.println(nombre + " se ha quedado sin ps :(");
     }
 
-    public void oir(String instruccion){
+    public void oir(String instruccion) {
         switch (instruccion) {
-            case "atacar" : atacar("placaje");
-            case "comer" : comer("aranaja");
-            case "dormir" : dormir();
-            case "correr" : correr();
+            case "atacar":
+                atacar("placaje");
+            case "comer":
+                comer("aranaja");
+            case "dormir":
+                dormir();
+            case "correr":
+                correr();
         }
     }
 
-    public static void main (String args[]){
+    public static void main(String args[]) {
         String[] tipo = new String[19];
         tipo[0] = "Ninguno";
         tipo[1] = "Acero";
@@ -136,7 +161,7 @@ public class Pokemon {
         tipo[16] = "Tierra";
         tipo[17] = "Veneno";
         tipo[18] = "Volador";
-        Pokemon miPokemon = new Pokemon(133, "Eevee", 1, 0.3, 6.5, true, 1);
+        Pokemon miPokemon = new Pokemon(133, "Eevee", 1, 0.3, 6.5, true, 1, false, true);
         System.out.println("Número " + miPokemon.getNum());
         System.out.println(miPokemon.getNombre());
         System.out.println("Tipo: " + tipo[11]);
@@ -145,6 +170,8 @@ public class Pokemon {
         System.out.println(miPokemon.getPeso() + " kg");
         System.out.println("Evoluciona: " + miPokemon.getEvo());
         System.out.println("Etapa: " + miPokemon.getEtapa());
+        System.out.println("Megaevoluciona: " + miPokemon.getMega());
+        System.out.println("Factor gigamax: " + miPokemon.getGiga());
         miPokemon.acariciar();
         miPokemon.oir("comer");
     }
