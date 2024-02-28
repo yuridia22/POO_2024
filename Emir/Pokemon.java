@@ -7,10 +7,8 @@ public class Pokemon {
     private double peso;
     private boolean evo;
     private int etapa;
-    private boolean mega;
-    private boolean giga;
 
-    public Pokemon (int numero, String nombre, int gen,  double alt, double peso, boolean evo, int etapa, boolean mega, boolean giga){
+    public Pokemon (int numero, String nombre, int gen,  double alt, double peso, boolean evo, int etapa){
         setNum(numero);
         setNombre(nombre);
         setGen(gen);
@@ -18,8 +16,6 @@ public class Pokemon {
         setPeso(peso);
         setEvo(evo);
         setEtapa(etapa);
-        setMega(mega);
-        setGiga(giga);
     }
 
     public int getNum(){
@@ -86,22 +82,6 @@ public class Pokemon {
         this.etapa = etapa;
     }
 
-    public boolean getMega(){
-        return mega;
-    }
-
-    public void setMega(boolean mega){
-        this.mega = mega;
-    }
-
-    public boolean getGiga(){
-        return giga;
-    }
-
-    public void setGiga(boolean giga){
-        this.giga = giga;
-    }
-
     public void atacar(String mov){
         System.out.println(nombre + " usa " + mov);
     }
@@ -156,7 +136,7 @@ public class Pokemon {
         tipo[16] = "Tierra";
         tipo[17] = "Veneno";
         tipo[18] = "Volador";
-        Pokemon miPokemon = new Pokemon(133, "Eevee", 1, 0.3, 6.5, true, 1, false, true);
+        Pokemon miPokemon = new Pokemon(133, "Eevee", 1, 0.3, 6.5, true, 1);
         System.out.println("Número " + miPokemon.getNum());
         System.out.println(miPokemon.getNombre());
         System.out.println("Tipo: " + tipo[11]);
@@ -165,8 +145,6 @@ public class Pokemon {
         System.out.println(miPokemon.getPeso() + " kg");
         System.out.println("Evoluciona: " + miPokemon.getEvo());
         System.out.println("Etapa: " + miPokemon.getEtapa());
-        System.out.println("Megaevoluciona: " + miPokemon.getMega());
-        System.out.println("Factor gigamax: " + miPokemon.getGiga());
         miPokemon.acariciar();
         miPokemon.oir("comer");
     }
