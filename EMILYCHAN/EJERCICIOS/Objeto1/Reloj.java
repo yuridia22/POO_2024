@@ -2,7 +2,7 @@ public class Reloj {
     private int horas;
     private int minutos;
     private int segundos;
-    private boolean formato24Horas; // true for 24-hour format, false for 12-hour format
+    private boolean formato24Horas; // 24-horas formato true, false  12-horas formato
     private boolean alarmaActivada;
 
     public Reloj(int horas, int minutos, int segundos, boolean formato24Horas) {
