@@ -1,4 +1,6 @@
-package DanaChin.Progrmas.claseHerenica;
+package PRO.Progrmas.claseHerenica;
+
+import java.util.Random;
 
 public class Eva {
     // Atributos
@@ -6,29 +8,20 @@ public class Eva {
     private String modelo;
     private String color;
     private int altura;
-    private int estado;
+    private int estado; // 1. activo 2.peleando 3. Apagado
 
     // Constructor
-    public Eva(String paisDelEva, String modelo, String color, int altura, int estado) {
-        this.paisDelEva = paisDelEva;
-        this.modelo = modelo;
-        this.color = color;
-        this.altura = altura;
-        this.estado = estado;
+    public Eva(String paisDelEva, String modelo, String color, int altura) {
+        setPaisDelEva(paisDelEva);
+        setModelo(modelo);
+        setColor(color);
+        setAltura(altura);
+        setEstado(3);
     }
 
     // Métodos Get y Set con switch
     public String getPaisDelEva() {
-        switch (paisDelEva) {
-            case "japon":
-                return "Japón";
-            case "Alemania":
-                return "Alemania";
-            case "estados unidos":
-                return "Estados Unidos";
-            default:
-                return "Desconocido";
-        }
+        return paisDelEva.toUpperCase();
     }
 
     public void setPaisDelEva(String paisDelEva) {
@@ -36,16 +29,7 @@ public class Eva {
     }
 
     public String getModelo() {
-        switch (modelo) {
-            case "Eva 00":
-                return "Eva 00";
-            case "eva01":
-                return "Eva 01";
-            case "eva 02":
-                return "Eva 02";
-            default:
-                return "Desconocido";
-        }
+        return modelo;
     }
 
     public void setModelo(String modelo) {
@@ -100,7 +84,8 @@ public class Eva {
     }
 
     // Acciones
-    public void correr(int accion) {
+    public void correr() {
+        int accion = (int) (Math.random() * 4 + 1);
         switch (accion) {
             case 1:
                 System.out.println("Corriendo para llegar al destino.");
