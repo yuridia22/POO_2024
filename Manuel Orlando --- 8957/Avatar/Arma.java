@@ -1,4 +1,3 @@
-package Avatar;
 public class Arma {
 
   public String nombre;
@@ -49,7 +48,7 @@ public class Arma {
   public void romperse() {
     System.out.println("Crack Crack Crack......");
   }
-  public void info(){
+  public void devolverInfo(){
     System.out.println("Nombre = " + nombre);
     System.out.println("Tipo = " + tipo);
     System.out.println("Material = " + material);
