@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        double A, B, C;
+        double a = 2, b = 3, c =5;
+        Scanner scanner = new Scanner(System.in);
+        A = scanner.nextDouble(); 
+        B = scanner.nextDouble();
+        C = scanner.nextDouble();
+        double MEDIA = ((A * a) + (B * b) + (C * c))/(a + b + c); 
+        System.out.printf("MEDIA = %.1f\n", MEDIA);
+    }    
+}
+
