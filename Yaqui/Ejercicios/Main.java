@@ -1,6 +1,7 @@
 package Yaqui.Ejercicios;
 
 import PRO.Progrmas.claseHerenica.Eva;
+import JesusUicab.ejerciciosclase.Ventilador;
 
 public class Main {
     public static void main(String[] arg) {
@@ -8,9 +9,8 @@ public class Main {
         miperro.ladrar();
         System.out.println(miperro.getNombre());
         miperro.comer("la tarea Jeffrey");
-        Eva e = new Eva("Japón", "RJ4560", "morado", 2, 3);
-        System.out.println("pais " + e.getPaisDelEva() + "modelo" + e.getModelo());
-
+        Ventilador miventi = new Ventilador("sharp", "negro");
+        miventi.apagar();
     }
 
 }
