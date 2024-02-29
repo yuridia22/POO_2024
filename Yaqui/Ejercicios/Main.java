@@ -6,6 +6,5 @@ public class Main {
         miperro.ladrar();
         System.out.println(miperro.getNombre());
         miperro.comer("la tarea Jeffrey");
-
     }
 }
