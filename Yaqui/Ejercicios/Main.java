@@ -1,7 +1,6 @@
 package Yaqui.Ejercicios;
 
-import PRO.Progrmas.claseHerenica.Eva;
-import JesusUicab.ejerciciosclase.Ventilador;
+import ManuelYah.Clima;
 
 public class Main {
     public static void main(String[] arg) {
@@ -9,8 +8,8 @@ public class Main {
         miperro.ladrar();
         System.out.println(miperro.getNombre());
         miperro.comer("la tarea Jeffrey");
-        Ventilador miventi = new Ventilador("sharp", "negro");
-        miventi.apagar();
+        Clima miclima = new Clima("lg", "verde", 32, 27, 34, true);
+        miclima.subirTemperatura(24);
+        System.out.println(miclima.getTemperatura());
     }
-
 }
