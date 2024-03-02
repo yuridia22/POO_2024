@@ -9,13 +9,7 @@ public class Motociclista {
 
     public Motociclista(String nombre, String pais, int edad, double altura, double peso, 
     String genero, String experiencia){
-        this.nombre = (nombre != " ") ? nombre : "Brayan";
-        this.pais = pais;
-        this.edad = edad;
-        this.altura = altura;
-        this.peso = peso;
-        this.genero = genero;
-        this.experiencia = experiencia;
+    
     }
     public String getNombre() {
         return nombre;
