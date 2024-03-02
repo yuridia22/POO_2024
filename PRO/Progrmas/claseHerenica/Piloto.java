@@ -1,4 +1,4 @@
-package DanaChin.Progrmas.claseHerenica;
+package PRO.Progrmas.claseHerenica;
 
 public class Piloto {
     // Atributos

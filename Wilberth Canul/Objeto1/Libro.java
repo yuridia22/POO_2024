@@ -3,14 +3,14 @@ package Objeto1;
 public class Libro {
     private String titulo;
     private String autor;
-    private int añoPublicacion;
+    private int anioPublicacion;
     private String idioma;
     private boolean disponibilidad;
 
-    public Libro(String titulo, String autor, int añoPublicacion, String idioma, boolean disponibilidad){
+    public Libro(String titulo, String autor, int anioPublicacion, String idioma, boolean disponibilidad){
         this.titulo = titulo;
         setAutor(autor);
-        setAñoPublicacion(añoPublicacion);
+        setAnioPublicacion(anioPublicacion);
         setIdioma(idioma);
         setDisponibilidad(true);
 
@@ -42,13 +42,13 @@ public class Libro {
         }
     }
 
-    public int getAñoPublicacion() {
-        return añoPublicacion;
+    public int getAnioPublicacion() {
+        return anioPublicacion;
     }
 
-    public void setAñoPublicacion(int añoPublicacion) {
-        if (añoPublicacion > 0) {
-            this.añoPublicacion = añoPublicacion;
+    public void setAnioPublicacion(int anioPublicacion) {
+        if (anioPublicacion > 0) {
+            this.anioPublicacion = anioPublicacion;
         } else {
             System.out.println("Error: El año de publicación debe ser mayor que 0.");
         }
@@ -96,7 +96,7 @@ public class Libro {
     public void mostrarInformacion() {
         System.out.println("Título: " + titulo);
         System.out.println("Autor: " + autor);
-        System.out.println("Año de Publicación: " + añoPublicacion);
+        System.out.println("Año de Publicación: " + anioPublicacion);
         System.out.println("Idioma: " + idioma);
         System.out.println("Disponibilidad: " + (disponibilidad ? "Disponible" : "No disponible"));
     }
