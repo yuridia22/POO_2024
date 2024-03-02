@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Pokemon",
+            "request": "launch",
+            "mainClass": "Pokemon",
+            "projectName": "POO_2024_635b353b"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
