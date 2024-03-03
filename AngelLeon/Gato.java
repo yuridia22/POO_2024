@@ -1,58 +1,68 @@
 public class Gato {
     private String nombre;
-    private String color;
+    private String[] coloresDisponibles = {"Blanco", "Negro", "Gris", "Naranja"};
     private int edadMeses;
-    private boolean vivo;
+    private boolean estaVivo;
 
     // Constructor
-
-    public Gato(String nombre, String color, int edadMeses, boolean vivo) {
-        this.nombre = (nombre != null && !nombre.isEmpty()) ? nombre : "Cokie";
-        this.color = (color != null && !color.isEmpty()) ? color : "Naranja";
+    public Gato(String nombre, String color, int edadMeses, boolean estaVivo) {
+        this.nombre = (nombre != null && !nombre.isEmpty()) ? nombre : "Capuchino";
         this.edadMeses = (edadMeses >= 0) ? edadMeses : 0;
-        this.vivo = vivo;
+        this.estaVivo = estaVivo;
+        setColor(color);
     }
 
     // Sets
-
     public void setNombre(String nombre) {
-        this.nombre = (nombre != null && !nombre.isEmpty()) ? nombre : "Cokie";
+        this.nombre = (nombre != null && !nombre.isEmpty()) ? nombre : "Capuchino";
     }
 
     public void setColor(String color) {
-        this.color = (color != null && !color.isEmpty()) ? color : "Naranja";
+        boolean colorValido = false;
+        for (String col : coloresDisponibles) {
+            if (col.equalsIgnoreCase(color)) {
+                colorValido = true;
+                break;
+            }
+        }
+        if (colorValido) {
+            this.coloresDisponibles[0] = color;
+        } else {
+            System.out.println("Color no válido. Se asignará el color por defecto.");
+            this.coloresDisponibles[0] = "Blanco"; // Cambiado a blanco como solicitado
+        }
     }
 
     public void setEdadMeses(int edadMeses) {
         this.edadMeses = (edadMeses >= 0) ? edadMeses : 0;
     }
 
-    public void setVivo(boolean vivo) {
-        this.vivo = vivo;
+    public void setEstaVivo(boolean estaVivo) {
+        this.estaVivo = estaVivo;
     }
 
     // Gets
-
     public String getNombre() {
         return nombre;
     }
 
     public String getColor() {
-        return color;
+        return coloresDisponibles[0];
     }
 
     public int getEdadMeses() {
         return edadMeses;
     }
 
-    public boolean isVivo() {
-        return vivo;
+    public boolean isEstaVivo() {
+        return estaVivo;
     }
 
     // Métodos
-
     public void morir() {
-        vivo = false;
+        if (estaVivo) {
+            estaVivo = false;
+        }
     }
 
     public void crecerEdad(int cantidad) {
@@ -60,27 +70,46 @@ public class Gato {
     }
 
     public String maullar() {
-        return (isVivo()) ? nombre + ": MIAU MIAU" : nombre + " está muerto, no puede maullar";
+        if (estaVivo) {
+            return nombre + ": MIAU MIAU";
+        } else {
+            return nombre + " está muerto, no puede maullar";
+        }
     }
 
     public String comer() {
-        return (isVivo()) ? nombre + ": Está comiendo ñom ñom" : nombre + " está muerto, no puede comer";
+        if (estaVivo) {
+            return nombre + ": Está comiendo ñom ñom";
+        } else {
+            return nombre + " está muerto, no puede comer";
+        }
     }
 
     public String dormir() {
-        return (isVivo()) ? nombre + ": Está durmiendo" : nombre + " está muerto, ya lleva durmiendo desde hace días y no despierta";
+        if (estaVivo) {
+            return nombre + ": Está durmiendo";
+        } else {
+            return nombre + " está muerto, ya lleva durmiendo desde hace días y no despierta";
+        }
     }
 
     public String limpiarse() {
-        return (isVivo()) ? nombre + ": Se está limpiando su pelo" : nombre + " no puede limpiarse solo, está muerto";
+        if (estaVivo) {
+            return nombre + ": Se está limpiando su pelo";
+        } else {
+            return nombre + " no puede limpiarse solo, está muerto";
+        }
     }
 
     public String saltar() {
-        return (isVivo()) ? nombre + ": Da un salto y se sube en algo" : nombre + " está muerto, no puede saltar";
+        if (estaVivo) {
+            return nombre + ": Da un salto y se sube en algo";
+        } else {
+            return nombre + " está muerto, no puede saltar";
+        }
     }
 
     public String mostrar() {
-        return "Nombre: " + nombre + ", Color: " + color + ", Edad en meses: " + edadMeses + " meses, Estado: " + ((isVivo()) ? "vivo" : "muerto");
+        return "Nombre: " + nombre + ", Color: " + coloresDisponibles[0] + ", Edad en meses: " + edadMeses + " meses, Estado: " + (estaVivo ? "vivo" : "muerto");
     }
 }
-
