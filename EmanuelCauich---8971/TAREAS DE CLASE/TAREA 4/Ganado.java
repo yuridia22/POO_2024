@@ -1,7 +1,7 @@
 public class Ganado {
     private String raza;
     private int edad; // en meses
-    private double peso; // en kilogramos
+    private double peso; // en kilogramos.
     private String color;
 
     public Ganado(String raza, int edad, double peso, String color) {
