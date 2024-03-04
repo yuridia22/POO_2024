@@ -52,7 +52,7 @@ public class Color {
         return colorANSI;
     }
 
-    public void setColorANSI(String colorANSI) {
+    private void setColorANSI(String colorANSI) {
         this.colorANSI = colorANSI;
     }
 }

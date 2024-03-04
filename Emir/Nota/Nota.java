@@ -14,6 +14,7 @@ public class Nota {
         setNota(nota);
         setFechaLim(fechaLim);
         setAutor("Emir");
+        c = new Color("rojo");
     }
 
     public String getFecha() {
@@ -48,12 +49,12 @@ public class Nota {
         this.fechaLim = fechaLim;
     }
 
-    public Color getC() {
+    public Color getColor() {
         return c;
     }
 
-    public void setC(Color c) {
-        this.c = c;
+    public void setColor(String color) {
+        this.c.setColor(color);
     }
 
     public String getAutor() {
@@ -65,6 +66,6 @@ public class Nota {
     }
 
     public String toString(){
-        return("\t\t\t" + getFecha() + "\n" + getImportancia() + "\n" + getNota() + "\nFecha límite: \n\t" + getFechaLim() + "\t" + getAutor()+ "\u001B[0m");
+        return(c.getColorANSI() + "\t\t\t" + getFecha() + "\n" + getImportancia() + "\n" + getNota() + "\nFecha límite: \n\t" + getFechaLim() + "\n" + getAutor()+ "\u001B[0m");
     }
 }
