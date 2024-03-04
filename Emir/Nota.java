@@ -5,6 +5,7 @@ public class Nota {
     private String fechaLim;
     private String color;
     private String colorHex;
+    private String autor;
 
     public Nota (String fecha, String nota, String fechaLim, String color){
         setFecha(fecha);
@@ -12,6 +13,7 @@ public class Nota {
         setNota(nota);
         setFechaLim(fechaLim);
         setColor(color);
+        setAutor("Emir");
     }
 
     public String getFecha() {
@@ -27,7 +29,7 @@ public class Nota {
     }
 
     public void setImportancia(String importancia) {
-        this.importancia = importancia;
+        this.importancia = importancia.equals("")?"URGENTE":importancia;
     }
 
     public String getNota() {
@@ -94,12 +96,20 @@ public class Nota {
         this.colorHex = colorHex;
     }
 
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
     public String escribir(){
-        return(getColorHex() + "\t\t\t" + getFecha() + "\n" + getImportancia() + "\n" + getNota() + "\nFecha límite: \n\t" + getFechaLim() +  "\u001B[0m");
+        return(getColorHex() + "\t\t\t" + getFecha() + "\n" + getImportancia() + "\n" + getNota() + "\nFecha límite: \n\t" + getFechaLim() + "\n" + getAutor()+ "\u001B[0m");
     }
 
     public static void main(String[] args) {
-        Nota n = new Nota("03/03/2024", "Realizar mi tarea de programación", "04/03/2024", "azul");
+        Nota n = new Nota("03/03/2024", "Realizar mi tarea de programación", "04/03/2024", "rojo");
         System.out.print(n.escribir());
     }
 }
