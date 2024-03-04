@@ -1,4 +1,4 @@
-package Avatar;
+
 
 public class Arquero {
     private String nombre;

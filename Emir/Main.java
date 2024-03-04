@@ -1,13 +1,8 @@
-public class Main{
-    public static void main (String[] args){
-        Perro miperro = new Perro("Pedro","salchicha",3.5, 1.5, 5.7);
-        System.out.println(miperro.getNombre());
-        System.out.println(miperro.getRaza());
-        System.out.println(miperro.getEdad() + " años");
-        System.out.println(miperro.getAltura() + " m");
-        System.out.println(miperro.getPeso() + " kg");
-        miperro.ladrar();
-        miperro.oir("comer");
-        
+public class Main {
+    public static void main(String[] args) {
+        //Nota n = new Nota("03/03/2024", "Realizar mi tarea de programación", "04/03/2024");
+        //System.out.println(n.toString());
+        Texto t = new Texto("Hola Mundo", 2);
+        System.out.println(t.escribir());
     }
 }

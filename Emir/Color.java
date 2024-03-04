@@ -1,5 +1,3 @@
-package Nota;
-
 public class Color {
     private String color;
     private String colorANSI;

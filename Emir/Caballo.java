@@ -1,4 +1,4 @@
-package Avatar;
+
 
 public class Caballo {
     private String nombre;

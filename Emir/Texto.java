@@ -1,13 +1,12 @@
 public class Texto {
-    private String color;
+    private Color c;
     private String texto;
     private double size;
-    private String colorHex;
 
-    public Texto(String color, String texto, double size){
-        setColor(color);
+    public Texto(String texto, double size){
         setTexto(texto);
         setSize(size);
+        c = new Color("azul");
     }
 
     public String getTexto(){
@@ -26,55 +25,15 @@ public class Texto {
         this.size = size>=1?size:12;
     }
 
-    public String getColor(){
-        return color;
+    public Color getColor(){
+        return c;
     }
 
     public void setColor(String color){
-        switch (color) {
-            case "azul" :
-            this.color = color;
-            setColorHex("\u001B[34m");
-                break;
-            case "verde" :
-            this.color = color;
-            setColorHex("\u001B[32m");
-                break;
-            case "rojo" :
-                this.color = color;
-                setColorHex("\u001B[31m");
-                break;
-            case "amarillo" :
-                this.color = color;
-                setColorHex("\u001B[33m");
-                break;
-            case "morado" :
-                this.color = color;
-                setColorHex("\u001B[35m");
-                break;
-            case "cian" :
-                this.color = color;
-                setColorHex("\u001B[36m");
-                break;
-            case "negro" :
-                this.color = color;
-                setColorHex("\u001B[30m");
-            default: 
-                this.color = color;
-                setColorHex("\u001B[37m");
-                break;
-        }
-    }
-
-    public String getColorHex(){
-        return colorHex;
-    }
-
-    public void setColorHex(String colorHex){
-        this.colorHex = colorHex;
+        this.c.setColor(color);
     }
 
     public String escribir(){
-        return(getColorHex() + getTexto() + "\u001B[0m");
+        return(c.getColorANSI() + getTexto() + "\u001B[0m");
     }
 }

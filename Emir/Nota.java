@@ -1,5 +1,3 @@
-package Nota;
-
 public class Nota {
     private String fecha;
     private String importancia;
