@@ -7,9 +7,9 @@ public class Hoja {
     private LocalDate fechaLimite;
     private String autor;
     private String color;
-
-    public Hoja(int año, int mes, int dia, String tipo, String texto, String autor, int año2, int mes2, int dia2, String color) {
-        setFecha(LocalDate.of(año, mes, dia));
+    //Aqui esta el constructor sin el fecha, los dia mes y año sirve para la definir la fecha limite.
+    public Hoja(String tipo, String texto, String autor, int año2, int mes2, int dia2, String color) {
+        setFecha(LocalDate.now());
         setTipo(tipo);
         setTexto(texto);
         setFechaLimite(LocalDate.of(año2, mes2, dia2));
@@ -84,7 +84,7 @@ public class Hoja {
         System.out.println("\033[38;5;" + color + "                                                           " + fecha);
         System.out.println("\033[38;5;" + color + "Tipo == " + tipo);
         System.out.println("\033[38;5;" + color + texto);
-        System.out.println("\033[38;5;" + color + "Fecha limite: ");
+        System.out.println("\033[38;5;" + color + "Fecha límite: ");
         System.out.println("\033[38;5;" + color + "         "+ fechaLimite);
         System.out.println("\033[38;5;" + color + "Autor = " + autor);
         System.out.println(borde);
