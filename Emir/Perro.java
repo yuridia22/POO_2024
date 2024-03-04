@@ -12,7 +12,7 @@ public class Perro{
         setEdad(edad);
         setAltura(altura);
         setPeso(peso);
-        this.estado = 1;
+        this.estado = 0;
     }
 
     public String getNombre(){
