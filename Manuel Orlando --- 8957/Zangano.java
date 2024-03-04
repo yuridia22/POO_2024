@@ -64,13 +64,10 @@ public class Zangano {
                 opcion = teclado.  next().charAt(0);
             }
         }
-        else{
-            System.out.println("El zangano vive durante tres meses y despues muere");
-        }
-        zangano1.comer(vivo);
-        zangano1.tomarAgua(vivo);
-        zangano1.volar(vivo);
-        zangano1.picar(vivo);
-        zangano1.trabajo(tipo);
+        zangano1.comer();
+        zangano1.tomarAgua();
+        zangano1.volar();
+        zangano1.picar();
+        zangano1.trabajo();
     }
 }

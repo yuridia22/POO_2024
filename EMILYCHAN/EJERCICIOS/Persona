@@ -1,0 +1,83 @@
+public class Persona {
+    private String nombre;
+    private int edad;
+    private char genero;
+    public Persona(String nombre, int edad, char genero) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.genero = genero;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public char getGenero() {
+        return genero;
+    }
+
+    public void setGenero(char genero) {
+        this.genero = genero;
+    }
+
+    // Método para mostrar información de la persona
+    public void mostrarInformacion() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Edad: " + edad);
+        System.out.println("Género: " + genero);
+    }
+
+    public void realizarAccion(String accion) {
+        System.out.println(nombre + " está realizando la acción: " + accion);
+    }
+    public void envejecer() {
+        edad++;
+        System.out.println(nombre + " ha envejecido un año. Nueva edad: " + edad);
+    }
+    public void saludar(Persona otraPersona) {
+        System.out.println(nombre + " saluda a " + otraPersona.getNombre());
+    }
+    public boolean esMayorDeEdad() {
+        return edad >= 18;
+    }
+
+    public static void main(String[] args) {
+        // Crear instancias de Persona
+        Persona persona1 = new Persona("Juan", 25, 'M');
+        Persona persona2 = new Persona("María", 30, 'F');
+
+        // Mostrar información de las personas
+        persona1.mostrarInformacion();
+        persona2.mostrarInformacion();
+
+        // Realizar acciones
+        persona1.realizarAccion("Caminar");
+        persona2.realizarAccion("Correr");
+
+        // Saludar a la otra persona
+        persona1.saludar(persona2);
+
+        // Envejecer a las personas
+        persona1.envejecer();
+        persona2.envejecer();
+
+        // Mostrar información actualizada
+        persona1.mostrarInformacion();
+        persona2.mostrarInformacion();
+
+        // Verificar si las personas son mayores de edad
+        System.out.println(persona1.getNombre() + " es mayor de edad: " + persona1.esMayorDeEdad());
+        System.out.println(persona2.getNombre() + " es mayor de edad: " + persona2.esMayorDeEdad());
+    }
+}

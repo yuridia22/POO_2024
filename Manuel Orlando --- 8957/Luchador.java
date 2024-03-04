@@ -60,7 +60,7 @@ public class Luchador {
     this.rendirse = r;
   }
   public void golpear() {
-    System.out.println("Clap Clap Clap Clap.....");
+    System.out.println("Pum Pum Pum Pum.....");
   }
   public void esquivar() {
     System.out.println("Agacharse");
