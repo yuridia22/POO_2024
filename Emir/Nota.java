@@ -105,7 +105,7 @@ public class Nota {
     }
 
     public String escribir(){
-        return(getColorHex() + "\t\t\t" + getFecha() + "\n" + getImportancia() + "\n" + getNota() + "\nFecha límite: \n\t" + getFechaLim() + "\n" + getAutor()+ "\u001B[0m");
+        return(getColorHex() + "\t\t\t" + getFecha() + "\n" + getImportancia() + "\n" + getNota() + "\nFecha límite: \n\t" + getFechaLim() + "\t" + getAutor()+ "\u001B[0m");
     }
 
     public static void main(String[] args) {
