@@ -43,6 +43,6 @@ public class HolaMundo {
     }
 
     public void setTamañoLetra(int tamañoLetra) {
-        this.tamañoLetra = tamañoLetra > 0 ? tamañoLetra : 14; // Se asegura de que el tamaño de letra sea mayor que 0
+        this.tamañoLetra = tamañoLetra > 0 ? tamañoLetra : 14;
     }
 }

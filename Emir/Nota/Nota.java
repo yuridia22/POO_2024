@@ -1,0 +1,71 @@
+package Nota;
+
+public class Nota {
+    private String fecha;
+    private String importancia;
+    private String nota;
+    private String fechaLim;
+    private Color c;
+    private String autor;
+
+    public Nota (String fecha, String nota, String fechaLim){
+        setFecha(fecha);
+        setImportancia("URGENTE");
+        setNota(nota);
+        setFechaLim(fechaLim);
+        setAutor("Emir");
+        c = new Color("rojo");
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getImportancia() {
+        return importancia;
+    }
+
+    public void setImportancia(String importancia) {
+        this.importancia = importancia.equals("")?"URGENTE":importancia;
+    }
+
+    public String getNota() {
+        return nota;
+    }
+
+    public void setNota(String nota) {
+        this.nota = nota;
+    }
+
+    public String getFechaLim() {
+        return fechaLim;
+    }
+
+    public void setFechaLim(String fechaLim) {
+        this.fechaLim = fechaLim;
+    }
+
+    public Color getColor() {
+        return c;
+    }
+
+    public void setColor(String color) {
+        this.c.setColor(color);
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public String toString(){
+        return(c.getColorANSI() + "\t\t\t" + getFecha() + "\n" + getImportancia() + "\n" + getNota() + "\nFecha límite: \n\t" + getFechaLim() + "\n" + getAutor()+ "\u001B[0m");
+    }
+}
