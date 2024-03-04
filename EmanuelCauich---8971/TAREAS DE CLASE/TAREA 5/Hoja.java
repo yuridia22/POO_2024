@@ -7,7 +7,7 @@ public class Hoja {
     private LocalDate fechaLimite;
     private String autor;
     private String color;
-
+    //Aqui esta el constructor sin el fecha, los dia mes y año sirve para la definir la fecha limite.
     public Hoja(String tipo, String texto, String autor, int año2, int mes2, int dia2, String color) {
         setFecha(LocalDate.now());
         setTipo(tipo);
