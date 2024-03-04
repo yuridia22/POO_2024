@@ -1,0 +1,12 @@
+import java.util.Scanner;
+public class Main{
+    public static void main (String[]args){
+        double pi, R, VOLUME;
+        Scanner scanner = new Scanner(System.in);
+        R = scanner.nextDouble();
+        pi = 3.14159;
+        VOLUME = (4/3.0) * pi *  Math.pow(R, 3);
+        System.out.printf("VOLUME = %.3f\n", VOLUME); 
+        
+    }
+}
