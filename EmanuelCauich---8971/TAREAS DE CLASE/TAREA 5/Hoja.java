@@ -8,7 +8,7 @@ public class Hoja {
     private String autor;
     private String color;
 
-    public Hoja(int año, int mes, int dia, String tipo, String texto, String autor, int año2, int mes2, int dia2, String color) {
+    public Hoja(int dia, int mes, int año, String tipo, String texto, String autor, int dia2, int mes2, int año2, String color) {
         setFecha(LocalDate.of(año, mes, dia));
         setTipo(tipo);
         setTexto(texto);
