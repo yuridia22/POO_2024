@@ -45,7 +45,7 @@ public class Nota {
         return texto;
     }
     
-    public void Texto(String texto){
+    public void setTexto(String texto){
         this.texto = texto.equals("")?"Cita alas 6:00PM en la peluqueria de rodo ":texto;
     }
     
