@@ -1,4 +1,5 @@
-package Julio_Ivan_Ek_Caamal.TERMOMETRO_DIGITAL;
+package TERMOMETRO_DIGITAL;
+
 public class TermometroDigital {
      /////////////////////////////////////////////atributos
      private String marca;
