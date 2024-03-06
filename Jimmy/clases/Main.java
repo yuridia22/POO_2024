@@ -7,7 +7,7 @@ public class Main {
     Habilidad hab1 = new Habilidad("Hielo", "Permite hacer hechizos de hielo");
     Mago mago = new Mago("Vadas", "Masculino", hab1);
 
-    System.out.println(mago.getHabilidad().getNombre());
-    System.out.println(mago.getHabilidad().getDescripcion());
+    System.out.println(mago.getHabilidad());
+    System.out.println(mago.getHabilidad());
   }
 }
