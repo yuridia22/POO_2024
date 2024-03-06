@@ -109,7 +109,7 @@ public class Pokemon {
     public void oir(String instruccion) {
         switch (instruccion) {
             case "atacar":
-                atacar("placaje");
+                atacar("rapidez");
             case "comer":
                 comer("aranaja");
             case "dormir":
