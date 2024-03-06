@@ -1,3 +1,5 @@
+package OBJETO;
+
 import java.util.Scanner;
 
 
