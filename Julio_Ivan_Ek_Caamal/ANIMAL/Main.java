@@ -1,5 +1,4 @@
-
-import ANIMAL.Perro;
+package ANIMAL;
 /**
  * Main
  */
