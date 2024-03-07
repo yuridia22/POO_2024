@@ -1,4 +1,4 @@
-package HOLAMUNDO;
+package julioekcaamal.holamundo;
 
 import java.util.Scanner;
 

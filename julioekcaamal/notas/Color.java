@@ -1,4 +1,4 @@
-package NOTAS;
+package julioekcaamal.notas;
 /**
  * Color
  */
