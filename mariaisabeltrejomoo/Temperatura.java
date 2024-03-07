@@ -1,6 +1,7 @@
 public class Temperatura{
     private double valor;
     private char uniMedida;
+    private Color color;
 
     public Temperatura(double valor, char uniMedida){
         setValor(valor);
@@ -9,6 +10,7 @@ public class Temperatura{
     public Temperatura(){
         setValor(36);
         setUniMedida('C');
+        
     }
     public double getValor(){
         return valor;
@@ -23,6 +25,6 @@ public class Temperatura{
         this.uniMedida=uniMedida;
     }
     public String toString(){
-        
+        return color.getColorANSI() + getValor() +"° "+ getUniMedida();
     }
 }
