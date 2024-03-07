@@ -18,7 +18,7 @@ public class Nota {
     }
 
     public void setFecha(String fecha) {
-        this.fecha = fecha;
+        this.fecha = fecha.equals("")?" ":fecha;
     }
 
     public String getImportancia() {
@@ -34,7 +34,7 @@ public class Nota {
     }
 
     public void setNota(String nota) {
-        this.nota = nota;
+        this.nota = nota.equals("")?" ":nota;
     }
 
     public String getFechaLim() {
@@ -42,7 +42,7 @@ public class Nota {
     }
 
     public void setFechaLim(String fechaLim) {
-        this.fechaLim = fechaLim;
+        this.fechaLim = fechaLim.equals("")?" ":fechaLim;
     }
 
     public String getAutor() {
@@ -50,7 +50,7 @@ public class Nota {
     }
 
     public void setAutor(String autor) {
-        this.autor = autor;
+        this.autor = autor.equals("")?" ":autor;
     }
 
     public String toString(){

@@ -47,15 +47,25 @@ public class BlocDeNotas {
         else {
             System.out.println(c.getColorANSI() + "Notas en el bloc de notas:");
             for (int i = 0; i < numNotas; i++) {
-                System.out.println(c.getColorANSI() + "\n______________________________________________________\nNota " + (i + 1) + ":");
+                System.out.println(c.getColorANSI() + "______________________________________________________\nNota " + (i + 1) + ":");
                 System.out.println(notas[i]);
             }
         }
     }
 
-    public void eliminarTodasLasNotas() {
+    public void eliminarNotas() {
         notas = new Nota[capacidad];
         numNotas = 0;
         System.out.println(c.getColorANSI() + "Todas las notas han sido eliminadas.");
+    }
+
+    public void actualizarNota(int numN, Nota n) {
+        if (numN >= 0 && numN < numNotas) {
+            notas[numN] = n;
+            System.out.println(c.getColorANSI() + "_______________________________________________________\nLa nota en el número " + numN + " ha sido actualizada correctamente.\n_______________________________________________________");
+        }
+        else {
+            System.out.println(c.getColorANSI() + "El índice especificado no es válido.");
+        }
     }
 }
