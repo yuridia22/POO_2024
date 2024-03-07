@@ -1,5 +1,6 @@
 package julioivanekcaamal;
 
+package ANIMAL;
 /**
  * Main
  */
