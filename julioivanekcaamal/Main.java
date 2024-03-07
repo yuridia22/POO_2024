@@ -1,6 +1,4 @@
-package julioivanekcaamal.ANIMAL;
-import animal.Perro;
-
+package julioivanekcaamal;
 
 /**
  * Main

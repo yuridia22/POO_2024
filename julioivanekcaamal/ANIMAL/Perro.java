@@ -1,4 +1,4 @@
-package julioivanekcaamal.ANIMAL;
+package ANIMAL;
 
 public class Perro {
     //////////////////////////////// atributos/////////////////////

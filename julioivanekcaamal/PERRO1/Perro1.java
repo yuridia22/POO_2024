@@ -1,4 +1,4 @@
-package julioivanekcaamal.PERRO1;
+package PERRO1;
 public class Perro1 {
     private String nombre;
     

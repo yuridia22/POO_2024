@@ -1,4 +1,4 @@
-package julioivanekcaamal.AVATAR;
+package AVATAR;
 
 /**
  * Avatar
