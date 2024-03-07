@@ -53,9 +53,19 @@ public class BlocDeNotas {
         }
     }
 
-    public void eliminarTodasLasNotas() {
+    public void eliminarNotas() {
         notas = new Nota[capacidad];
         numNotas = 0;
         System.out.println(c.getColorANSI() + "Todas las notas han sido eliminadas.");
+    }
+
+    public void actualizarNota(int numN, Nota n) {
+        if (numN >= 0 && numN < numNotas) {
+            notas[numN] = n;
+            System.out.println(c.getColorANSI() + "La nota en el número " + numN + " ha sido actualizada correctamente.");
+        }
+        else {
+            System.out.println(c.getColorANSI() + "El índice especificado no es válido.");
+        }
     }
 }
