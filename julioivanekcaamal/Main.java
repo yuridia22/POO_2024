@@ -1,14 +1,14 @@
 package julioivanekcaamal;
 
 
-import julioivanekcaamal.PERRO1.Perro1;
+import julioivanekcaamal.ANIMAL.Perro;
 /**
  * Main
  */
 public class Main {
 
     public static void main(String[] args) {
-       Perro1 p = new Perro1("chapa");
+       Perro p = new Perro("chapa");
        System.out.println(p.getNombre()); 
     }
 }
