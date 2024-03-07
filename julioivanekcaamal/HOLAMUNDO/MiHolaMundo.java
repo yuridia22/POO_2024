@@ -1,3 +1,5 @@
+package julioivanekcaamal.HOLAMUNDO;
+
 import java.util.Scanner;
 
 public class MiHolaMundo {

@@ -1,4 +1,4 @@
-package OBJETO;
+package julioivanekcaamal.OBJETO;
 
 import java.util.Scanner;
 

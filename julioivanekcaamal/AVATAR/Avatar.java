@@ -1,3 +1,5 @@
+package julioivanekcaamal.AVATAR;
+
 /**
  * Avatar
  */
