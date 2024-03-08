@@ -1,4 +1,4 @@
-public class BlocNotas {
+public class BlocNota{
     private Nota nota1;
     private Nota nota2; 
     private Color c;
