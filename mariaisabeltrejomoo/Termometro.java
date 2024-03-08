@@ -10,7 +10,7 @@ public class Termometro{
 
 	public Termometro(String color){
         setMarca(marca);
-        this.color=new Color(color);
+        this.c=new Color(color);
         this.temperatura=new Temperatura();
         this.max =temperatura;
         this.min=temperatura;
@@ -19,7 +19,7 @@ public class Termometro{
 	public Termometro(){
         setMarca("Checkatek");
 		this.temperatura=new Temperatura(36, 'C');
-        this.color=new Color("magenta");
+        this.c=new Color("magenta");
         this.max =temperatura;
         this.min=temperatura;
 	}
@@ -33,10 +33,10 @@ public class Termometro{
         this.c.setColorANSI(c);
     }
     public String getEstado(){
-		return encendido;
+		return setEncendido();
 	}
 	public void setEstado(boolean encendido){
-		this.encendido=encendido;
+		setEncendido=encendido;
 	}
 	public Temperatura getTemperatura(){
 		return temperatura;
