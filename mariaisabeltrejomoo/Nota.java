@@ -4,13 +4,15 @@ public class Nota{
     private String cuerpoNota;
     private String fechaLimite;
     private String autor;
+    private Color color;
 
-    public Nota (String fecha, String tipo, String cuerpoNota, String fechaLimite, String autor){
+    public Nota (String fecha, String tipo, String cuerpoNota, String fechaLimite, String autor, Color color){
         setFecha(fecha);
         setTipo(tipo);
         setCuerpoNota(cuerpoNota);
         setFechaLimite(fechaLimite);
         setAutor(autor);
+        setColor(color);;
     }
 
     public String getFecha() {
@@ -51,8 +53,14 @@ public class Nota{
     public void setAutor(String autor) {
         this.autor=autor.equals(" ")?"Isabel":autor;
     }
+    public Color getColor(){
+        return color;
+    }
+    public void setColor(Color color){
+        this.color=color;
+    }
 
     public String toString(){
-        return("   " + getFecha() + "\n" + getTipo() + "\n" + getCuerpoNota() + "\nFecha limite: "+getFechaLimite() + "\n" + getAutor()+"\033[35m");
+        return("   " + getFecha() + "\n" + getTipo() + "\n" + getCuerpoNota() + "\nFecha limite: "+getFechaLimite() + "\n" + getAutor());
     }
 }

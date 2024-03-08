@@ -24,6 +24,9 @@ public class Temperatura{
     public void setUniMedida(char uniMedida){
         this.uniMedida=uniMedida;
     }
+    public void setColor(String color) {
+        this.c.setColor(color);
+    }
     public String toString(){
         return c.getColorANSI() + getValor() +"° "+ getUniMedida();
     }
