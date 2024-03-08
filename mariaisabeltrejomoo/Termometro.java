@@ -57,7 +57,7 @@ public class Termometro{
         }else{
             temp=random.nextDouble()*100;
             temperatura.setValor(temp);
-            if(max.setValor()<temp;){
+            if(max.setValor()<temp){
                 max.setValor(temp);
             }
             if(min.setValor()<temp){
@@ -92,6 +92,7 @@ public class Termometro{
             break;
         case "k":
         case "K":
+            if(temperatura.getUniMedida()==)
 
         case
         default:
