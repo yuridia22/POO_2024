@@ -1,4 +1,4 @@
-package julioivanekcaamal.NOTAS;
+
 
 /**
  * Notas
@@ -34,13 +34,13 @@ public class Notas {
     public String getFechaLimite(){
         return fechaLimite;
     }
-    public void setFechaLimite(String fechaLimite){
+    public void setFechaLimite(){
         this.fechaLimite = fechaLimite.equals(" ")? "sin fecha limite": fechaLimite;
     }
     public String getTipoNota(){
         return tipoNota;
     }
-    public void setTipoNota(String tipoNota){
+    public void setTipoNota(){
         this.tipoNota = tipoNota.equals(" ")? "normal---" : tipoNota;
     }
     public String getTexto(){

@@ -1,4 +1,3 @@
-package julioivanekcaamal.NOTAS;
 /**
  * Color
  */
@@ -18,7 +17,7 @@ public class Color {
     public String getColor(){
         return nombre;
     }
-    public void setColor(String nombre){
+    public void setColor(){
         this.nombre = nombre.equals(" ")? "Blanco" : nombre;
     }
     public String getColorAnsi(){
@@ -27,7 +26,15 @@ public class Color {
     public void setColorAnsi(){
         Scanner A = new Scanner(System.in);
         System.out.print("Que color desea su mensaje : rojo,verde,amarillo y azul. (color en minusculas) = ");
-        
+        color = s.nextLine();
+            switch (A) {
+                case value:
+                    
+                    break;
+            
+                default:
+                    break;
+            }
     }
 
 
