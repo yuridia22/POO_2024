@@ -2,11 +2,11 @@ import java.util.Random;
 
 public class Termometro{
     private String marca;
-    private Color color;
+    private Color c;
 	private Temperatura temperatura;
     private Temperatura max;
     private Temperatura min;
-    private boolean encendido;
+    private String Estado;
 
 	public Termometro(String color){
         setMarca(marca);
@@ -29,7 +29,10 @@ public class Termometro{
     public void setMarca(String marca){
         this.marca=marca;
     }
-    public boolean getEncendido(){
+    public void setColor(String c){
+        this.c.setColorANSI(c);
+    }
+    public String getEstado(){
 		return encendido;
 	}
 	public void setEstado(boolean encendido){
@@ -39,15 +42,12 @@ public class Termometro{
 		return temperatura;
 	}
 	public void setTemperatura(int valor, char uniMedida){
-		t.setValor();
-        t.setUniMedida();
+		temperatura.setValor();
+        temperatura.setUniMedida();
 	}
     public void setTemperatura(Temperatura t){
 		temperatura=t;
 	}
-    public void setColor(String c){
-        this.color.setColorANSI(c);
-    }
     public String medirTemperatura(){
         Random random=new Random();
 		double temp = "0.0";
@@ -60,14 +60,14 @@ public class Termometro{
             if(max.setValor()<temp;){
                 max.setValor(temp);
             }
-            if(min.setValor()<temp;){
+            if(min.setValor()<temp){
                 min.setValor(temp);
             }
         }
     }
 
     public void datos(){
-        if (estado == 1) {
+        if (encendido=encendido.equals("true")) {
             System.out.println(temp.medirTemp() + " " + temp.getUnidad() + "|\t|" + temp.getTemMax() + " - " + temp.getTemMin() + convUnidad());
         }
     }
@@ -75,10 +75,10 @@ public class Termometro{
         this.encendido()=true;
     }
     public void apagar(){
-        this.encender()=false;
+        this.encendido()=false;
     }
     public void conv(char uni){
-        if (!getEstado()) {
+        if (!getEncendido()) {
             
         }
     }
