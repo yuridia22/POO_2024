@@ -6,7 +6,7 @@ public class Termometro{
 	private Temperatura temperatura;
     private Temperatura max;
     private Temperatura min;
-    private boolean estado;
+    private boolean encendido;
 
 	public Termometro(String color){
         setMarca(marca);
@@ -14,12 +14,14 @@ public class Termometro{
         this.temperatura=new Temperatura();
         this.max =temperatura;
         this.min=temperatura;
-        encendido();
 	}
 
 	public Termometro(){
-        setMarca('');
-		this.temperatura=new Temperatura();
+        setMarca("Checkatek");
+		this.temperatura=new Temperatura(36, 'C');
+        this.color=new Color("magenta");
+        this.max =temperatura;
+        this.min=temperatura;
 	}
     public String getMarca(){
         return marca;
@@ -27,18 +29,18 @@ public class Termometro{
     public void setMarca(String marca){
         this.marca=marca;
     }
-    public int getEstado(){
-		return estado;
+    public boolean getEncendido(){
+		return encendido;
 	}
-	public void setEstado(int estado){
-		this.estado=estado;
+	public void setEstado(boolean encendido){
+		this.encendido=encendido;
 	}
 	public Temperatura getTemperatura(){
 		return temperatura;
 	}
 	public void setTemperatura(int valor, char uniMedida){
-		temperatura.setValor();
-        temperatura.setUniMedida();
+		t.setValor();
+        t.setUniMedida();
 	}
     public void setTemperatura(Temperatura t){
 		temperatura=t;
@@ -49,7 +51,7 @@ public class Termometro{
     public String medirTemperatura(){
         Random random=new Random();
 		double temp = "0.0";
-        if (!getEstado()) {
+        if (!getEncendido()) {
             System.out.println();
             
         }else{
