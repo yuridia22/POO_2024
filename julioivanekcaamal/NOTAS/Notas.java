@@ -34,13 +34,13 @@ public class Notas {
     public String getFechaLimite(){
         return fechaLimite;
     }
-    public void setFechaLimite(){
+    public void setFechaLimite(String fechaLImite){
         this.fechaLimite = fechaLimite.equals(" ")? "sin fecha limite": fechaLimite;
     }
     public String getTipoNota(){
         return tipoNota;
     }
-    public void setTipoNota(){
+    public void setTipoNota(String tipoNota){
         this.tipoNota = tipoNota.equals(" ")? "normal---" : tipoNota;
     }
     public String getTexto(){

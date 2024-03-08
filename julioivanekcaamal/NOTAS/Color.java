@@ -17,7 +17,7 @@ public class Color {
     public String getColor(){
         return nombre;
     }
-    public void setColor(){
+    public void setColor(String nombre){
         this.nombre = nombre.equals(" ")? "Blanco" : nombre;
     }
     public String getColorAnsi(){
@@ -26,15 +26,8 @@ public class Color {
     public void setColorAnsi(){
         Scanner A = new Scanner(System.in);
         System.out.print("Que color desea su mensaje : rojo,verde,amarillo y azul. (color en minusculas) = ");
-        color = s.nextLine();
-            switch (A) {
-                case value:
-                    
-                    break;
+        String color = A.nextLine();
             
-                default:
-                    break;
-            }
     }
 
 
