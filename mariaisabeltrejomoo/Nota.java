@@ -6,7 +6,7 @@ public class Nota{
     private String autor;
     private Color color;
 
-    public Nota (String fecha, String tipo, String cuerpoNota, String fechaLimite, String autor, ){
+    public Nota (String fecha, String tipo, String cuerpoNota, String fechaLimite, String autor, Color color){
         setFecha(fecha);
         setTipo(tipo);
         setCuerpoNota(cuerpoNota);
