@@ -1,4 +1,4 @@
-package julioivanekcaamal.NOTAS;
+package julioivanekcaamal.NOTA;
 /**
  * Color
  */
