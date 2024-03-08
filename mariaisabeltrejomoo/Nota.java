@@ -6,13 +6,13 @@ public class Nota{
     private String autor;
     private Color color;
 
-    public Nota (String fecha, String tipo, String cuerpoNota, String fechaLimite, String autor, Color color){
+    public Nota (String fecha, String tipo, String cuerpoNota, String fechaLimite, String autor){
         setFecha(fecha);
         setTipo(tipo);
         setCuerpoNota(cuerpoNota);
         setFechaLimite(fechaLimite);
         setAutor(autor);
-        setColor(color);;
+        setColor(color);
     }
 
     public String getFecha() {
