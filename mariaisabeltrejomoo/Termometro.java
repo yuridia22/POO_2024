@@ -101,4 +101,9 @@ public class Termometro{
         temperatura.setValor((temperatura.getValor()*1.8)+32);
         temperatura.setUniMedida('f');
     }
+    public void fAc(){
+        temperatura.setValor((temperatura.getValor()*1.8)+32);
+        temperatura.setUniMedida('f');
+    }
+
 }
