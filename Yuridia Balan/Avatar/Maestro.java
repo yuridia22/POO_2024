@@ -1,49 +1,48 @@
 public class Maestro {
-    private String Nombre;
-    private String Asignatura;
-    private int Anioservicio;
-    private String Grado; 
-    public Maestro (String Nombre, String Asignatura, int Anioservicio, String Grado){
-        setNombre(Nombre);
-        setAsignatura(Asignatura);
-        setAnioservicio(Anioservicio);
-        setGrado(Grado);
+    private String nombre;
+    private String asignatura;
+    private int anioservicio;
+    private String grado; 
+    public Maestro (String nombre, String asignatura, int anioservicio, String grado){
+        setnombre(nombre);
+        setasignatura(asignatura);
+        setanioservicio(anioservicio);
+        setgrado(grado);
     }
 
-    public String getNombre() {
-        return Nombre;
+    public String getnombre() {
+        return nombre;
     }
     
-    public void setNombre (String Nombre) {
-        this.Nombre = Nombre;
+    public void setnombre (String nombre) {
+        this.nombre = nombre;
     }
     
-    public String getAsignatura() {
-        return Asignatura;
+    public String getasignatura() {
+        return asignatura;
     }
 
-    public void setAsignatura (String Asignatura) {
-        this.Asignatura = Asignatura;
+    public void setasignatura (String asignatura) {
+        this.asignatura = asignatura;
     }
     
-    public int getAnioservicio() {
-        return Anioservicio;
+    public int getanioservicio() {
+        return anioservicio;
     }
     
-    public void setAnioservicio (int Anioservicio) {
-        this.Anioservicio = Anioservicio;
+    public void setanioservicio (int anioservicio) {
+        this.anioservicio = anioservicio;
     }
 
-    public String getGrado() {
-        return Grado;
+    public String getgrado() {
+        return grado;
     }
     
-    public void setGrado (String Grado) {
-        this.Grado = Grado;
+    public void setgrado (String grado) {
+        this.grado = grado;
     }
 
     public String verDatos(){
-        return ("Nombre: " + getNombre() + "\nAsignatura: " + getAsignatura() + "\nAños de servicio: " + getAnioservicio() + "\nGrado: " + getGrado());
+        return ("nombre: " + getnombre() + "\nasignatura: " + getasignatura() + "\nanios de servicio: " + getanioservicio() + "\ngrado: " + getgrado());
     }
-
 }
